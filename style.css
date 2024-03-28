@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.parent-card {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 6rem;
+}
+
+.parent-card .title {
+  font-family: Sans-Serif, Comic Sans MS, Helvetica, Arial;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.progress {
+  background-color: #212121;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.player-duration {
+  position: relative;
+  display: flex;
+  top: -25px;
+  color: #fff;
+  justify-content: space-between;
+}
+
+.player-progress {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 26px 10px 12px;
+  height: 6px;
+  width: 90%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+#author {
+  font-style: italic;
+  color: #555;
+}
+
+button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  margin: 5px;
+  border-radius: 50%; 
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease; 
+}
+
+button:hover {
+  transform: scale(1.1); 
+}
+
+#generate {
+  background-color: #3498db;
+  color: #fff;
+}
+
+#play {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+#pause {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+#next {
+  background-color: #9b59b6;
+  color: #fff;
+}
+
+#previous {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .parent-card {
+    max-width: 80%; 
+  }
+}
