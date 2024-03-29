@@ -95,7 +95,7 @@ class MusicPlayer {
     
     public updateProgressBar(): void {
         const percentage: number = (this.audio.currentTime / this.audio.duration) * 100;
-        this.progressBar.style.width = percentage + 'px';
+        this.progressBar.style.width = percentage + '%';
         const format = (time: number) => String(Math.floor(time)).padStart(2, '0');
         this.durationElement.textContent = `${format(this.audio.duration / 60)}:${format(this.audio.duration % 60)}`;
         this.currentTimeElement.textContent = `${format(this.audio.currentTime / 60)}:${format(this.audio.currentTime % 60)}`;
