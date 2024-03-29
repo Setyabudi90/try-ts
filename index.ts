@@ -67,7 +67,6 @@ class MusicPlayer {
         if(!isNaN(this.resumeTime)){
           this.audio.currentTime = this.resumeTime;
         }
-        this.audio.play();
       }
       this.audio.play();
       this.isPaused = false;
