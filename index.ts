@@ -20,15 +20,29 @@ class QuoteFetcher {
       const quote: Data = new Data(convert.content, convert.author);
       return quote;
     } catch(e){
-      throw new Error(e)
+      throw new Error(e);
+    }
+  }
+}
+
+class Translate {
+  static async getTranslateText(text: string): Promise {
+    const API = `https://api.mymemory.translated.net/get?q=${ encodeURIComponent(text)}&langpair=en|id`;
+    try {
+      const response = await fetch(API, {method: "GET"});
+      const convert = await response.json();
+      return convert.responseData.translatedText;
+    } catch(e){
+      throw new Error(e);
     }
   }
 }
 
 async function displayQuote(){
   const quote: Data = await QuoteFetcher.RandomQuote();
+  const translateText = Translate.getTranslateText(quote.text);
   try {
-    text.textContent = quote.text;
+    text.textContent = translateText;
     author.textContent = "Pembuat: " + quote.author;
   } catch(e){
     throw new Error(e)
