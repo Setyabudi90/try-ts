@@ -116,10 +116,8 @@ class MusicPlayer {
 }
 
 class Button {
-  private id: string;
   private eventHandlers: { [key: string]: Function } = {};
   constructor(private id: string){
-    this.id = id;
     const button = document.getElementById(id);
     if(button){
       button.addEventListener("click", () => this.onClick());
