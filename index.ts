@@ -45,7 +45,7 @@ async function displayQuote(){
     text.textContent = translateText;
     author.textContent = "Pembuat: " + quote.author;
   } catch(e){
-    throw new Error(e)
+    throw new Error(e);
   }
 }
 
@@ -118,11 +118,11 @@ class MusicPlayer {
 class Button {
   private eventHandlers: { [key: string]: Function } = {};
   constructor(private id: string){
-    const button = document.getElementById(id);
+    const button: HTMLElement = document.getElementById(id);
     if(button){
       button.addEventListener("click", () => this.onClick());
     } else {
-      throw new Error("not found")
+      throw new Error("button not found")
     }
   }
   
