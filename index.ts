@@ -26,7 +26,7 @@ class QuoteFetcher {
 }
 
 class Translate {
-  static async getTranslateText(text: string): Promise {
+  static async getTranslateText(text: string): Promise<string> {
     const API = `https://api.mymemory.translated.net/get?q=${ encodeURIComponent(text)}&langpair=en|id`;
     try {
       const response = await fetch(API, {method: "GET"});
@@ -38,7 +38,7 @@ class Translate {
   }
 }
 
-async function displayQuote(){
+async function displayQuote(): Promise<void>{
   const quote: Data = await QuoteFetcher.RandomQuote();
   const translateText = Translate.getTranslateText(quote.text);
   try {
