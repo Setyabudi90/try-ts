@@ -1,1 +1,2 @@
-This is a small project with TS that I made as a result of my learning. 
+## About 
+ - this repositories is a result that i learning typescript
