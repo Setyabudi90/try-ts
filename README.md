@@ -1,2 +1,2 @@
 ## About 
- - this repositories is a result that i learning typescript
+This repository contains my ts learning results 
